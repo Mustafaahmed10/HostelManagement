@@ -2,7 +2,10 @@ package application;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.stage.Stage;
 
 public class HostelOwnerController {
 
@@ -25,23 +28,48 @@ public class HostelOwnerController {
     }
 
     @FXML
-    private void contactSupport(ActionEvent event) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Contact Support");
-        alert.setHeaderText("Support Contact");
-        alert.setContentText("Reach out to support for any assistance.");
-        alert.showAndWait();
-    }
-
+    private void contactSupport() {
+        try {
+            // Load the Contact Support scene (FXML)
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("contactSupport2.fxml"));
+            Scene contactSupportScene = new Scene(loader.load());
+            
+            // Create a new window (stage) for Contact Support
+            Stage stage = new Stage();
+            stage.setTitle("Contact Support");
+            stage.setScene(contactSupportScene);
+            stage.show();
+        } catch (Exception e) {
+            // Handle any loading errors
+            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Failed to load Contact Support");
+            alert.setContentText("There was an error loading the Contact Support page.");
+            alert.showAndWait();
+        }
+        }
     @FXML
-    private void viewEditAccount(ActionEvent event) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("View/Edit Account");
-        alert.setHeaderText("Account Details");
-        alert.setContentText("View or edit your account details from here.");
-        alert.showAndWait();
-    }
+    
+ // Action for 'View/Edit Account' button
+    private void viewEditAccount() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("ownerViewedit.fxml"));
+            Scene viewEditAccountScene = new Scene(loader.load());
 
+            Stage stage = new Stage();
+            stage.setTitle("View/Edit Account");
+            stage.setScene(viewEditAccountScene);
+            stage.show();
+        } catch (Exception e) {
+            e.printStackTrace();
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Error");
+            alert.setHeaderText("Failed to load View/Edit Account");
+            alert.setContentText("There was an error loading the View/Edit Account page.");
+            alert.showAndWait();
+        }
+    }
     @FXML
     private void deleteAccount(ActionEvent event) {
         Alert alert = new Alert(Alert.AlertType.WARNING);
