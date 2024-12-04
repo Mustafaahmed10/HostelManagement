@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.HostelOwnerController">
+    <VBox spacing="20" alignment="CENTER" padding="20">
+        <Label text="View Listed Hostel"/>
+        <TextField fx:id="hostelIDField" promptText="Enter Hostel ID"/>
+        <Button text="View Hostel" onAction="#viewListedHostels"/>
+    </VBox>
+</AnchorPane>

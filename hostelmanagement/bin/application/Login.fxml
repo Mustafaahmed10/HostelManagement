@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="402.0" prefWidth="660.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LoginController">
+   <Rectangle arcHeight="5.0" arcWidth="5.0" height="88.0" layoutX="-6.0" layoutY="-1.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="668.0">
+      <fill>
+         <LinearGradient endX="1.0" endY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="1.0" green="0.7283465266227722" blue="0.11999999731779099" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color green="0.9058375954627991" blue="1.0" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </fill>
+   </Rectangle>
+    <!-- Title -->
+    <Label layoutX="165.0" layoutY="14.0" prefHeight="58.0" prefWidth="398.0" style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Hostel Management System">
+      <font>
+         <Font name="System Bold" size="32.0" />
+      </font></Label>
+    
+    <!-- Username Label and Field -->
+    <Label layoutX="291.0" layoutY="136.0" prefHeight="26.0" prefWidth="88.0" text="Username:">
+      <font>
+         <Font name="System Bold" size="14.0" />
+      </font></Label>
+    <TextField fx:id="usernameField" layoutX="393.0" layoutY="137.0" promptText="Enter your username" />
+
+    <!-- Password Label and Field -->
+    <Label layoutX="287.0" layoutY="213.0" text="Password:">
+      <font>
+         <Font name="System Bold" size="15.0" />
+      </font></Label>
+    <PasswordField fx:id="passwordField" layoutX="393.0" layoutY="211.0" promptText="Enter your password" />
+
+    <!-- Error/Success Message Label on the Right -->
+    <Label fx:id="statusMessageLabel" layoutX="470.0" layoutY="300.0" style="-fx-text-fill: blue; -fx-font-size: 14px;" wrapText="true" />
+
+    <!-- Login Button -->
+    <Button fx:id="loginButton" layoutX="434.0" layoutY="335.0" onAction="#handleLogin" prefHeight="46.0" prefWidth="71.0" style="-fx-background-color: cyan;" text="Login" />
+   <ImageView fitHeight="315.0" fitWidth="261.0" layoutY="87.0" pickOnBounds="true">
+      <image>
+         <Image url="@../../23206.jpg" />
+      </image>
+   </ImageView>
+</AnchorPane>

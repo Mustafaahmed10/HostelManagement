@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400" prefWidth="600" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/23.0.1" fx:controller="application.AdminController">
+   <Rectangle arcHeight="5.0" arcWidth="5.0" height="92.0" layoutX="-10.0" layoutY="-6.0" stroke="BLACK" strokeType="INSIDE" width="616.0">
+      <fill>
+         <LinearGradient endX="1.0" endY="1.0">
+            <stops>
+               <Stop>
+                  <color>
+                     <Color red="0.8299999833106995" green="0.8097759485244751" blue="0.14110000431537628" />
+                  </color>
+               </Stop>
+               <Stop offset="1.0">
+                  <color>
+                     <Color green="0.8629441261291504" blue="1.0" />
+                  </color>
+               </Stop>
+            </stops>
+         </LinearGradient>
+      </fill>
+   </Rectangle>
+    <VBox alignment="CENTER" layoutX="7.0" layoutY="84.0" prefHeight="279.0" prefWidth="314.0" spacing="20">
+        <Button fx:id="showAllUsersButton" onAction="#showAllUsers" prefWidth="300" text="Show All Users" />
+        <Button fx:id="showAllHostelOwnersButton" onAction="#showAllHostelOwners" prefWidth="300" text="Show All Hostel Owners" />
+        <Button fx:id="contactSupportButton" onAction="#contactSupport" prefWidth="300" text="Contact Support" />
+        <Button fx:id="managePaymentsButton" onAction="#managePayments" prefHeight="30.0" prefWidth="300" text="Manage Payments" />
+    </VBox>
+   <Label layoutX="139.0" layoutY="15.0" text="Admin Dashboard">
+      <font>
+         <Font size="43.0" />
+      </font>
+   </Label>
+   <ImageView fitHeight="257.0" fitWidth="267.0" layoutX="332.0" layoutY="99.0" pickOnBounds="true">
+      <image>
+         <Image url="@../../94097e458fbb22184941be57aaab2c8f.jpg" />
+      </image>
+   </ImageView>
+</AnchorPane>
